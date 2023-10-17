@@ -6,23 +6,31 @@ import {
   Image,
   Text,
 } from "react-native";
-import React from "react";
+import React, { useRef } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import SearchBar from "./SearchBar";
+import BottomSheet from "./BottomSheet";
 
 const CustomHeader = () => {
+  const bottomSheetRef = useRef(null);
+
+  const openModal = () => {
+    bottomSheetRef.current?.present();
+  };
+
   return (
     <SafeAreaView style={styles.safeArea}>
+      <BottomSheet ref={bottomSheetRef} />
       <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={openModal}>
           <Image
             style={styles.bike}
             source={require("../assets/icons/fast-delivery.png")}
           />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.titleContainer}>
+        <TouchableOpacity style={styles.titleContainer} onPress={openModal}>
           <Text style={styles.title}>Delivery Now</Text>
           <View style={styles.locationName}>
             <Text style={styles.subTitle}>Singapore</Text>

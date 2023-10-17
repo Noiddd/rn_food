@@ -1,10 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
@@ -38,51 +32,27 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: "#fff",
     flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingLeft: 20,
+    paddingRight: 20,
+    gap: 30,
   },
   searchSection: {
-    backgroundColor: Colors.lightGrey,
-    borderRadius: 7,
     flex: 1,
-    flexDirection: "row",
-    gap: "10",
-    paddingHorizontal: "20",
-    alignItems: "center",
   },
   searchField: {
+    backgroundColor: Colors.lightGrey,
+    borderRadius: 7,
+    padding: 10,
+    alignItems: "center",
+    justifyContent: "flex-start",
     flexDirection: "row",
+    gap: 10,
   },
-  optionButton: {
-    padding: "10",
-    borderRadius: "50",
-  },
+  optionButton: { padding: 10, borderRadius: 50 },
   searchButton: {},
-  searchInput: {},
+  searchInput: {
+    color: Colors.mediumDark,
+  },
 });
-
-// const styles = StyleSheet.create({
-//   searchContainer: {
-//     height: 60,
-//     backgroundColor: "#fff",
-//     flexDirection: "row",
-//     alignItems: "center",
-//     justifyContent: "space-between",
-//     paddingLeft: 20,
-//     paddingRight: 30,
-//     gap: 30,
-//   },
-//   searchSection: {
-//     backgroundColor: Colors.lightGrey,
-//     padding: 10,
-//     borderRadius: 7,
-//     flex: 1,
-//   },
-//   searchField: {
-//     alignItems: "center",
-//     justifyContent: "flex-start",
-//     flexDirection: "row",
-//     gap: 10,
-//   },
-//   optionButton: {},
-//   searchButton: {},
-//   searchInput: {},
-// });
